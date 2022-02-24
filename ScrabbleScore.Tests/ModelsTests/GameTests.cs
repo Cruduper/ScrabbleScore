@@ -29,6 +29,11 @@ namespace ScrabbleScore.Tests
     {
       Assert.AreEqual(2, Game.ReturnScore("at"));
     }
+    [TestMethod]
+    public void ReturnScore_ReturnsScoreForWordQuintillion_26()
+    {
+      Assert.AreEqual(26, Game.ReturnScore("quixotic"));
+    }
   }
 }
 
@@ -36,6 +41,13 @@ namespace ScrabbleScore.Tests
 /*
 if A is entered, return 1
 if q is entered, return 10
+
+q u  i   n   t   i   l   l   i   o  n
+10 1 1   1   1   1   1   1   1   1  1
+
+
+q  u  i  x  o  t  i  c
+10 1  1  8  1  1  1  3
 
 
 
